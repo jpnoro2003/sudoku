@@ -5,7 +5,7 @@ function update_grid(level, current_grid, clear_grid){
         new_grid = current_grid
     } else {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("POST", "http://cogninotes.pythonanywhere.com/generate", false);
+        xmlHttp.open("POST", "https://cogninotes.pythonanywhere.com/generate", false);
         xmlHttp.setRequestHeader("Content-Type", "application/json");
         
         var data = { 'level': level };
