@@ -1,6 +1,4 @@
 function check_grid(){
-    alert("Hi")
-
     // Get values in current grid
     var grid = []
     for (var row = 0; row < 9; row++) {
