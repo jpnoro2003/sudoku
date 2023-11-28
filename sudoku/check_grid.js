@@ -24,9 +24,6 @@ function check_grid(){
     xmlHttp.send(JSON.stringify(data));
 
     test = JSON.parse(xmlHttp.response)
-    if (test["solved"]){
-        alert("Solved! :D")
-    } else {
-        alert("Not Solved :(")
-    }
+
+    return test
 }

@@ -5,6 +5,7 @@
         <script src="sudoku/grid_creation.js"></script>
         <script src="sudoku/update_grid.js"></script>
         <script src="sudoku/check_grid.js"></script>
+        <title>Sudoku - Game</title>
         <script>
             $(document).ready(function(){
                 create_grid();
@@ -20,13 +21,18 @@
                     }
                 };
                 document.getElementById("check").onclick = function () {
-                    check_grid()
+                    result = check_grid()
+                    if (result["solved"]){
+                        alert("Solved! :D")
+                    } else {
+                        alert("Not Solved :(")
+                    }
                 };
             })
         </script>
     </head>
     <body class="bg-dark">
-        <h1 class="text-white" align="center" style="font-size: 5vmax">Sudoku</h1>
+        <h1 class="text-white" align="center" style="font-size: 5vmax">Sudoku Classic | <a href="Sudoku_solver.html" class="link-secondary">Solver</a></h1>
         <div class="container-fluid d-flex justify-content-center"></div>
 
         <div class="container-fluid px-12 py-2">
