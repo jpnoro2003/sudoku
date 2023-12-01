@@ -1,4 +1,4 @@
-# Sudoku solver using Integer Programming
+# Sudoku Solver using Integer Programming
 https://main--enchanting-sorbet-a78130.netlify.app/sudoku
 
 ## Variables
@@ -30,23 +30,25 @@ Finally, we check each 3x3 grid within the 9x9 sudoku grid to ensure it contains
 
 $\sum_{i=1}^3 \sum_{j=1}^3 x_{3a+i,3b+j,v} = 1 \quad \forall v \in \{1, ..., 9\}, a,b \in \{0, 1, 2 \}$
 
-    \includegraphics[width=0.5\linewidth]{sudokugrid.png}\\
-    Figure 1: A sudoku grid with each 3x3 grid highlighted based on the values of a and b.\\
+![figure 1](https://github.com/jpnoro2003/sudoku/blob/main/pictures/sudokugrid.png)
 
-    \includegraphics[width=0.2\linewidth]{3x3.png}\\
-    Figure 2: A 3x3 grid in a sudoku grid, with each cell labeled with its corresponding values of i and j.
+Figure 1: A sudoku grid with each 3x3 grid highlighted based on the values of a and b.
+
+![figure 2](https://github.com/jpnoro2003/sudoku/blob/main/pictures/3x3.png)
+
+Figure 2: A 3x3 grid in a sudoku grid, with each cell labeled with its corresponding values of i and j.
 
 ## IP Formulation
 
 $\textbf{max } \quad 1$
 
-$\sum_{i=1}^9 x_{r,c,i} = 1 \quad \forall r,c \in \{1, ..., 9\}$ \\
+$\sum_{i=1}^9 x_{r,c,i} = 1 \quad \forall r,c \in \{1, ..., 9\}$ 
 
-$\sum_{i=1}^9 x_{r,i,v} = 1 \quad \forall r,v \in \{1, ..., 9\}$\\
+$\sum_{i=1}^9 x_{r,i,v} = 1 \quad \forall r,v \in \{1, ..., 9\}$
 
-$\sum_{i=1}^9 x_{i,c,v} = 1 \quad \forall c,v \in \{1, ..., 9\}$\\
+$\sum_{i=1}^9 x_{i,c,v} = 1 \quad \forall c,v \in \{1, ..., 9\}$
 
-$\sum_{i=1}^3 \sum_{j=1}^3 x_{3a+i,3b+j,v} = 1 \quad \forall v \in \{1, ..., 9\}, a,b \in \{0, 1, 2 \}$ \\
+$\sum_{i=1}^3 \sum_{j=1}^3 x_{3a+i,3b+j,v} = 1 \quad \forall v \in \{1, ..., 9\}, a,b \in \{0, 1, 2 \}$ 
 
 $x_{r,c,v} \in \{0,1\} \quad \forall r,c,v \in \{1,...,9\}$
 
